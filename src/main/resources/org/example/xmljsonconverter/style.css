@@ -1,0 +1,113 @@
+/* --- CONFIGURATION GÉNÉRALE (Thème Sombre) --- */
+.root-pane {
+    -fx-background-color: #1e1e1e; /* Fond très sombre */
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- EN-TÊTE --- */
+.header-bar {
+    -fx-background-color: #252526; /* Gris légèrement plus clair */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 2);
+    -fx-border-color: #333;
+    -fx-border-width: 0 0 1 0;
+}
+
+.app-logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #e0e0e0;
+    -fx-letter-spacing: 1px;
+}
+
+/* --- TEXTE LABELS --- */
+.lbl-caption {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
+}
+
+.lbl-caption-center {
+    -fx-text-fill: #555;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+/* --- ZONES DE TEXTE (Style IDE) --- */
+.code-editor {
+    -fx-control-inner-background: #2b2b2b; /* Fond de la zone de texte */
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #a9b7c6; /* Couleur du texte code (gris clair) */
+    -fx-font-family: 'Consolas', 'Monospaced', monospace;
+    -fx-font-size: 13px;
+    -fx-highlight-fill: #214283;
+    -fx-highlight-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #3c3f41;
+}
+
+.code-editor:focused {
+    -fx-border-color: #4a90e2; /* Bordure bleue au focus */
+}
+
+.read-only {
+    -fx-control-inner-background: #232323; /* Un peu plus sombre pour la lecture seule */
+}
+
+/* --- BOUTONS SECONDAIRES (Haut) --- */
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ccc;
+    -fx-border-color: #555;
+    -fx-border-radius: 3;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: white;
+}
+
+/* --- BOUTONS D'ACTION (Centre) --- */
+.btn-action {
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 3);
+}
+
+.btn-action:pressed {
+    -fx-translate-y: 2; /* Effet d'enfoncement */
+    -fx-effect: none;
+}
+
+/* Couleur Orange pour XML -> JSON */
+.btn-orange {
+    -fx-background-color: linear-gradient(to right, #e67e22, #d35400);
+}
+.btn-orange:hover {
+    -fx-background-color: linear-gradient(to right, #d35400, #e67e22);
+}
+
+/* Couleur Bleue pour JSON -> XML */
+.btn-blue {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);
+}
+.btn-blue:hover {
+    -fx-background-color: linear-gradient(to right, #2980b9, #3498db);
+}
+
+/* --- COMBO BOX --- */
+.combo-box {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: white;
+    -fx-border-color: #555;
+}
+.combo-box .cell {
+    -fx-text-fill: white; /* Texte dans la combo */
+}

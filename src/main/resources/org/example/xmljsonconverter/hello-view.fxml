@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.xmljsonconverter.MainController" styleClass="root-pane">
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+            <Label text="XJ CONVERTER PRO" styleClass="app-logo"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleImport" text="📂 Ouvrir" styleClass="btn-secondary"/>
+            <Button onAction="#handleSave" text="💾 Exporter" styleClass="btn-secondary"/>
+            <Separator orientation="VERTICAL" />
+            <ComboBox fx:id="strategieCombo" prefWidth="220.0" />
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="SOURCE (Code brut)" styleClass="lbl-caption"/>
+                <TextArea fx:id="inputArea" promptText="Collez le code XML (avec CDATA/NS) ou JSON ici..." VBox.vgrow="ALWAYS" styleClass="code-editor"/>
+            </VBox>
+
+            <VBox spacing="15" alignment="CENTER" minWidth="160">
+                <Label text="ACTIONS" styleClass="lbl-caption-center"/>
+                <Button onAction="#handleXmlToJson" text="XML to JSON" styleClass="btn-action, btn-orange" wrapText="true" maxWidth="140"/>
+                <Button onAction="#handleJsonToXml" text="JSON to XML" styleClass="btn-action, btn-blue" wrapText="true" maxWidth="140"/>
+            </VBox>
+
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="CIBLE (Résultat)" styleClass="lbl-caption"/>
+                <TextArea fx:id="outputArea" editable="false" promptText="Le résultat apparaîtra ici..." VBox.vgrow="ALWAYS" styleClass="code-editor, read-only"/>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" styleClass="footer-bar">
+            <padding><Insets top="5" right="10" bottom="5" left="10"/></padding>
+            <Label text="Supporte: CDATA, Namespaces, Attributs" style="-fx-text-fill: #777;" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
