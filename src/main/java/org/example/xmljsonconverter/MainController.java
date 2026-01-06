@@ -13,7 +13,6 @@ public class MainController {
     @FXML private TextArea outputArea;
     @FXML private ComboBox<String> strategieCombo;
 
-    // Instanciation des services avec les nouveaux noms
     private final ManualConverterService manualService = new ManualConverterService();
     private final JacksonConverterService jacksonService = new JacksonConverterService();
 
@@ -21,7 +20,7 @@ public class MainController {
     public void initialize() {
         if (strategieCombo != null) {
             strategieCombo.getItems().setAll("Manuel (Regex Avancé)", "Automatique (Jackson Pro)");
-            strategieCombo.setValue("Automatique (Jackson Pro)"); // Jackson est recommandé pour CDATA/Namespaces
+            strategieCombo.setValue("Automatique (Jackson Pro)"); 
         }
     }
 
