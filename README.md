@@ -3,6 +3,8 @@
 
 
 
+
+
 Une application Java avec interface graphique (JavaFX) permettant de convertir des fichiers ou du texte **XML en JSON** et inversement (**JSON en XML**).
 
 Ce projet a pour but pédagogique de comparer deux approches :
